@@ -1,18 +1,11 @@
-# js-css-refresher
+フロントエンドの開発環境等で、CSSのブラウザキャッシュをクリアするためのカンタンなスクリプトです。
+本番環境での利用は、初期表示時の崩れや、Googleが発表したUX指標「コアウェブバイタル」に悪影響を及ぼすため、利用はオススメしません。
 
-CSSのキャッシュを削除するために、ファイル名の後ろにクエリをつけるJS
-https://nkmrkisk.com/archives/1723
+CSSのキャッシュを削除するために、ファイル名の後ろにクエリを付与しています。
 
-CSSはブラウザで自動でキャッシュされるため、CSSの更新をしても中々反映されないことがある。
-
-cssの後ろにクエリを入れると、ブラウザが違うファイルだと認識して読み取ってくれる
-
+### 利用方法
 ```
-例）
-example.com/asset/css/style.css
-↓
-example.com/asset/css/style.css?00001
+<script type="text/javascript" src="{$YOUR_WEB_ROOT}/{$YOUR_ASSET_PATH}/cssRefresh.js"></script>
 ```
-なので、それをJSで読み込みの度にクエリを追加してくれるようにした
 
 
